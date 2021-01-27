@@ -10,12 +10,12 @@ export default function TabTwoScreen() {
       <Calendar
         monthFormat={'yyyy年 MM月'}
         markingType={'period'}
-        markedDates={{
-          '2021-01-15': { marked: true, dotColor: '#006fcf' },
-          '2021-01-20': { marked: true, dotColor: '#006fcf' },
-          '2021-01-24': { marked: true, dotColor: '#006fcf' },
-          '2021-01-21': { marked: true, dotColor: '#006fcf' },
-        }}
+        // markedDates={{
+        //   '2021-01-15': { marked: true, dotColor: '#006fcf' },
+        //   '2021-01-20': { marked: true, dotColor: '#006fcf' },
+        //   '2021-01-24': { marked: true, dotColor: '#006fcf' },
+        //   '2021-01-21': { marked: true, dotColor: '#006fcf' },
+        // }}
         theme={{
           textDisabledColor: 'gray',
           calendarBackground: '#121214',
