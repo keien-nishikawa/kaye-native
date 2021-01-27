@@ -18,33 +18,37 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="ホーム"
+      initialRouteName="TabOne"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="ホーム"
+        name="TabOne"
         component={TabOneNavigator}
         options={{
+          title: 'ホーム',
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="イベント"
+        name="TabTwo"
         component={TabTwoNavigator}
         options={{
+          title: 'イベント',
           tabBarIcon: ({ color }) => <TabBarIcon name="calendar" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="その他"
+        name="TabThree"
         component={TabThreeNavigator}
         options={{
+          title: 'その他',
           tabBarIcon: ({ color }) => <TabBarIcon name="apps" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="マイページ"
+        name="TabFour"
         component={TabFourNavigator}
         options={{
+          title: 'マイページ',
           tabBarIcon: ({ color }) => <TabBarIcon name="md-person" color={color} />,
         }}
       />

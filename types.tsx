@@ -4,10 +4,10 @@ export type RootStackParamList = {
 };
 
 export type BottomTabParamList = {
-  "ホーム": undefined;
-  "イベント": undefined;
-  "その他": undefined;
-  "マイページ": undefined;
+  TabOne: undefined;
+  TabTwo: undefined;
+  TabThree: undefined;
+  TabFour: undefined;
 };
 
 export type TabOneParamList = {
