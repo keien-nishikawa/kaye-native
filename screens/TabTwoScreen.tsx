@@ -1,10 +1,9 @@
 import * as React from 'react';
-// import { StyleSheet } from 'react-native';
+import { StyleSheet, SectionList } from 'react-native';
 import { Calendar, LocaleConfig } from 'react-native-calendars';
-import { View } from '../components/Themed';
+import { View, Text } from '../components/Themed';
 
 export default function TabTwoScreen() {
-
   return (
     <View>
       <Calendar
@@ -26,6 +25,18 @@ export default function TabTwoScreen() {
           selectedDayTextColor: 'white'
         }}
       />
+      <View>
+        <SectionList
+          sections={[
+            { title: '9:30', data: ['午前練 Aチーム'] },
+            { title: '14:00', data: ['午後練 Bチーム'] },
+            { title: '18:30', data: ['ミーティング'] },
+          ]}
+          renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
+          renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+          keyExtractor={item => item}
+        />
+      </View>
     </View>
   );
 }
@@ -38,3 +49,21 @@ LocaleConfig.locales.jp = {
 };
 LocaleConfig.defaultLocale = 'jp';
 
+const styles = StyleSheet.create({
+  sectionHeader: {
+    paddingTop: 4,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 4,
+    fontSize: 14,
+    fontWeight: 'bold',
+    backgroundColor: '#008CFF',
+    color: 'white'
+  },
+  item: {
+    padding: 10,
+    fontSize: 16,
+    height: 44,
+    fontWeight: 'bold',
+  },
+});
