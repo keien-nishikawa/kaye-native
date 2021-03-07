@@ -8,7 +8,7 @@ export default function TabTwoScreen() {
     <View>
       <Calendar
         monthFormat={'yyyy年 MM月'}
-        markingType={'period'}
+        markingType={'custom'}
         // markedDates={{
         //   '2021-01-15': { marked: true, dotColor: '#006fcf' },
         //   '2021-01-20': { marked: true, dotColor: '#006fcf' },
@@ -22,8 +22,10 @@ export default function TabTwoScreen() {
           monthTextColor: 'white',
           textSectionTitleColor: 'white',
           arrowColor: 'white',
-          selectedDayTextColor: 'white'
+          selectedDayTextColor: 'white',
         }}
+        onDayPress={(day) => { console.log('selected day', day) }}
+        hideExtraDays={true}
       />
       <View>
         <SectionList
