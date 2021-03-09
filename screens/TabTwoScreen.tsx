@@ -8,13 +8,11 @@ export default function TabTwoScreen() {
     <View>
       <Calendar
         monthFormat={'yyyy年 MM月'}
-        markingType={'custom'}
-        // markedDates={{
-        //   '2021-01-15': { marked: true, dotColor: '#006fcf' },
-        //   '2021-01-20': { marked: true, dotColor: '#006fcf' },
-        //   '2021-01-24': { marked: true, dotColor: '#006fcf' },
-        //   '2021-01-21': { marked: true, dotColor: '#006fcf' },
-        // }}
+        markedDates={{
+          '2021-03-17': { marked: true },
+          '2021-03-18': { marked: true },
+          '2021-03-20': { marked: true },
+        }}
         theme={{
           textDisabledColor: 'gray',
           calendarBackground: '#121214',
@@ -27,7 +25,7 @@ export default function TabTwoScreen() {
         onDayPress={(day) => { console.log('selected day', day) }}
         hideExtraDays={true}
       />
-      <View>
+      {/* <View>
         <SectionList
           sections={[
             { title: '9:30', data: ['午前練 Aチーム'] },
@@ -38,7 +36,7 @@ export default function TabTwoScreen() {
           renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title}</Text>}
           keyExtractor={item => item}
         />
-      </View>
+      </View> */}
     </View>
   );
 }
