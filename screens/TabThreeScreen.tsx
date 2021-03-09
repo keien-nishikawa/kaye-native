@@ -1,15 +1,33 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import { View } from '../components/Themed';
+import { ListItem } from 'react-native-elements'
 
 export default function TabThreeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>その他</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabThreeScreen.tsx" />
+      <View style={styles.firstCard}>
+        <ListItem containerStyle={{ backgroundColor: "#121214" }} bottomDivider>
+          <ListItem.Content>
+            <ListItem.Title style={styles.cardTitle}>{'部活ノートを書く'}</ListItem.Title>
+          </ListItem.Content>
+        </ListItem>
+        <ListItem containerStyle={{ backgroundColor: "#121214" }} bottomDivider>
+          <ListItem.Content>
+            <ListItem.Title style={styles.cardTitle}>{'部活ノート一覧'}</ListItem.Title>
+          </ListItem.Content>
+        </ListItem>
+        <ListItem containerStyle={{ backgroundColor: "#121214" }} bottomDivider>
+          <ListItem.Content>
+            <ListItem.Title style={styles.cardTitle}>{'欠席申請'}</ListItem.Title>
+          </ListItem.Content>
+        </ListItem>
+        <ListItem containerStyle={{ backgroundColor: "#121214" }}>
+          <ListItem.Content>
+            <ListItem.Title style={styles.cardTitle}>{'過去の申請'}</ListItem.Title>
+          </ListItem.Content>
+        </ListItem>
+      </View>
     </View>
   );
 }
@@ -17,16 +35,20 @@ export default function TabThreeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#000'
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  firstCard: {
+    marginBottom: 10
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  secondCard: {
+    marginTop: 10,
+    marginBottom: 10
   },
+  card: {
+    backgroundColor: '#000',
+    color: '#fff'
+  },
+  cardTitle: {
+    color: 'white'
+  }
 });
